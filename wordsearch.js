@@ -1,6 +1,8 @@
 const wordSearch = (letters, word) => {
     if (letters.length === 0 || !word) {
         return false;
+    } else if (!Array.isArray(letters[0])) {
+        return false;
     }
 
     // All possible directions

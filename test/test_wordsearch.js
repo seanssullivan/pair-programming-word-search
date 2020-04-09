@@ -101,8 +101,13 @@ describe("#wordSearch()", function() {
     assert.isTrue(result);
   });
 
-  it("should return A for [['A']]", function() {
+  it("should return true for a single letter matrix", function() {
     const result = wordSearch([['A']], 'A');
     assert.isTrue(result);
+  });
+
+  it("should return false if passed a non-nested array", function() {
+    const result = wordSearch(['A'], 'A');
+    assert.isFalse(result);
   });
 });
